@@ -24,7 +24,6 @@ const MainHeader = () => {
 export default MainHeader;
 
 const Header = styled.header`
-  background: #333;
   color: white;
   padding: 10px 0;
 `;
@@ -46,7 +45,6 @@ const NavBtns = styled.ul`
   @media (max-width: 768px) {
     top: 50px;
     left: 0;
-    background: #333;
   }
 `;
 
