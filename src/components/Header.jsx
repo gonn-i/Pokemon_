@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import Logo from '../assets/pokemon_logo.png';
+import ThemeBtn from './Button';
 
 const MainHeader = () => {
   return (
@@ -10,10 +11,10 @@ const MainHeader = () => {
         </div>
         <NavBtns>
           <li>
-            <button href="#darkmode">다크모드</button>
+            <ThemeBtn />
           </li>
           <li>
-            <button href="#language">한국어/영어</button>
+            <Language>🇰🇷 🔄 🇺🇸</Language>
           </li>
         </NavBtns>
       </Navbar>
@@ -53,4 +54,8 @@ const LogoImg = styled.img`
   @media (max-width: 768px) {
     max-width: 140px;
   }
+`;
+
+const Language = styled.div`
+  font-size: x-large;
 `;

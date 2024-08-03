@@ -1,22 +1,21 @@
 import { styled } from 'styled-components';
+import types from '../styles/type';
 
-const Card = () => {
+const Card = ({ num, img, name, types }) => {
+  const maintype = types[0].type.name;
   return (
-    <Container>
+    <Container maintype={maintype}>
       <div>
-        <div>No.1</div>
-        <h1>이상해씨</h1>
+        <div>No.{num}</div>
+        <Name>{name[0].name}</Name>
         <Bottom>
-          <PokemonImg src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" />
+          <PokemonImg src={img.front_default} />
           <Types>
-            <Type>
-              <img></img>
-              <span>grass</span>
-            </Type>
-            <Type>
-              <img></img>
-              <span>poison</span>
-            </Type>
+            {types.map((each, i) => (
+              <Type key={i} type={each.type.name}>
+                <span>{each.type.name}</span>
+              </Type>
+            ))}
           </Types>
         </Bottom>
       </div>
@@ -27,12 +26,21 @@ const Card = () => {
 export default Card;
 
 const Container = styled.section`
-  color: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: ${({ maintype }) => types.typeBgColor[maintype]};
+  color: white;
   text-decoration: none;
   border-radius: 15px;
   padding: 25px;
-  display: flex;
-  box-shadow: rgba(0, 0, 0, 0.15) 4px 10px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 4px 10px 10px 4px;
+`;
+
+const Name = styled.h1`
+  margin: 6px 0px 0px 0px;
+  font-size: var(--font-size-large);
+  font-family: 'yg-jalnan';
 `;
 
 const Bottom = styled.div`
@@ -40,19 +48,32 @@ const Bottom = styled.div`
 `;
 
 const PokemonImg = styled.img`
-  max-width: 100px;
-  float: right;
-  margin-bottom: 10px;
+  min-width: 200px;
+  bottom: -30px;
+  right: 0px;
+  position: absolute;
+
+  @media (max-width: 1300px) {
+    min-width: 180px;
+  }
+
+  @media (max-width: 768px) {
+    min-width: 200px;
+  }
 `;
 const Types = styled.div`
-  width: 70%;
+  width: 39%;
+  margin-top: 10px;
   display: grid;
-  gap: 20px;
+  gap: 14%;
   grid-template-columns: 1fr 1fr;
 `;
 const Type = styled.label`
+  padding: 10%;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-types)
   color: white;
   text-align: center;
-  background: black;
+  background-color: ${({ type }) => types.typeColor[type]};
   border-radius: 10px;
 `;
