@@ -4,6 +4,21 @@ import './type';
 
 export const GlobalStyles = createGlobalStyle`
 ${reset};
+
+  * {
+    // 드래그 하지 못하게
+    user-select: none; 
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   :root {
     //폰트 크기
     --font-size-large: 27px; 
