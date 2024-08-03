@@ -22,6 +22,7 @@ const pokemonSlice = createSlice({
           default_name: newPokemon.data.forms,
           types: newPokemon.data.types,
           stats: newPokemon.data.stats,
+          img: newPokemon.data.sprites,
         });
       });
     },

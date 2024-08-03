@@ -3,7 +3,7 @@ const typeColor = {
   fire: '#D6734A',
   water: '#5D84C0',
   electric: '#F0BC46',
-  grass: '#76A853',
+  grass: '#4A8322',
   ice: '#84C6E7',
   fighting: '#D69F52',
   poison: '#6E5293',
@@ -20,11 +20,12 @@ const typeColor = {
 };
 
 const typeBgColor = {
+  darkMode: '#333',
   normal: '#C1C2C1',
-  fire: '#EF7374',
+  fire: '#e79495',
   water: '#74ACF5',
   electric: '#FCD659',
-  grass: '#82C274',
+  grass: '#94c988',
   ice: '#81DFF7',
   fighting: '#FFAC59',
   poison: '#B884DD',

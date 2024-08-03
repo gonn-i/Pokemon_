@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
 import styled, { keyframes, css } from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
+import { themeActions } from '../store/theme-slice';
 
 const ThemeBtn = () => {
-  const [isToggled, setIsToggled] = useState(false);
+  const isDarkActive = useSelector((state) => state.darkMode.isDarkActive);
+  const dispatch = useDispatch();
 
-  const toggle = () => {
-    setIsToggled(!isToggled);
+  const onClick = () => {
+    dispatch(themeActions.toggleDarkMode());
+    console.log(isDarkActive);
   };
 
   return (
-    <Container isToggled={isToggled} onClick={toggle}>
-      <Circle isToggled={isToggled} />
-      {!isToggled && <span>☀️</span>}
-      {isToggled && <span>🌝</span>}
+    <Container isDarkActive={isDarkActive} onClick={onClick}>
+      <Circle isDarkActive={isDarkActive} />
+      {!isDarkActive && <span>☀️</span>}
+      {isDarkActive && <span>🌝</span>}
     </Container>
   );
 };
@@ -20,10 +23,10 @@ const ThemeBtn = () => {
 export default ThemeBtn;
 const bgTransition = keyframes`
   0% {
-    background-color: #fcd659;
+    background: var(--toggle-background-light);
   }
   100% {
-    background-color: #333;
+    background: var(--toggle-background-dark);
   }
 `;
 
@@ -33,14 +36,15 @@ const Container = styled.div`
   width: 70px;
   height: 20px;
   border-radius: 15px;
-  background-color: ${({ isToggled }) => (isToggled ? '#333' : '#fcd659')};
-  justify-content: ${({ isToggled }) => (isToggled ? '' : 'space-around')};
+  background: ${({ isDarkActive }) =>
+    isDarkActive ? 'var(--toggle-background-dark)' : 'var(--toggle-background-light)'};
+  justify-content: ${({ isDarkActive }) => (isDarkActive ? '' : 'space-around')};
   padding: 5px;
   cursor: pointer;
   transition: background-color 0.5s ease;
 
-  ${({ isToggled }) =>
-    isToggled &&
+  ${({ isDarkActive }) =>
+    isDarkActive &&
     css`
       animation: ${bgTransition} 0.3s forwards;
     `}
@@ -49,8 +53,8 @@ const Container = styled.div`
 const Circle = styled.div`
   width: 20px;
   height: 20px;
-  background-color: white;
+  background: var(--text-color-main);
   border-radius: 50%;
   transition: transform 0.5s ease;
-  transform: ${({ isToggled }) => (isToggled ? 'translateX(50px)' : 'translateX(0)')};
+  transform: ${({ isDarkActive }) => (isDarkActive ? 'translateX(50px)' : 'translateX(0)')};
 `;
