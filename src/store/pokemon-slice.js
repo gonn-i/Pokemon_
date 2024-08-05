@@ -1,11 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// 포켓몬 정보를 담을 배열
 const initialPokemonData = {
   pokemons: [],
+  detail: [],
 };
 
-// 포켓몬 정보 관리 slice 생성
 const pokemonSlice = createSlice({
   name: 'pokemons',
   initialState: initialPokemonData,
@@ -13,18 +12,28 @@ const pokemonSlice = createSlice({
     fillList(state, action) {
       const newPokemons = action.payload.pokemons;
 
-      console.log(newPokemons);
       newPokemons.forEach((newPokemon) => {
         state.pokemons.push({
           id: newPokemon.data.id,
-          weight: newPokemon.data.weight,
-          height: newPokemon.data.height,
-          default_name: newPokemon.data.forms,
+          default_name: newPokemon.data.forms[0].name,
           types: newPokemon.data.types,
-          stats: newPokemon.data.stats,
           img: newPokemon.data.sprites,
         });
       });
+    },
+
+    searchById(state, action) {
+      const pokemon = action.payload.pokemon;
+
+      state.detail = {
+        id: pokemon.data.id,
+        weight: pokemon.data.weight,
+        height: pokemon.data.height,
+        default_name: pokemon.data.forms[0].name,
+        types: pokemon.data.types,
+        stats: pokemon.data.stats,
+        img: pokemon.data.sprites,
+      };
     },
   },
 });

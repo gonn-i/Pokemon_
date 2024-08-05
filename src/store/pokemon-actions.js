@@ -1,7 +1,7 @@
 import { pokemonActions } from './pokemon-slice';
 import { getList } from '../apis';
 
-export const fetchList = (i) => {
+export const fetchList = () => {
   return async (dispatch) => {
     try {
       const requests = [];
@@ -11,6 +11,17 @@ export const fetchList = (i) => {
 
       const pokemonDataArray = await Promise.all(requests);
       await dispatch(pokemonActions.fillList({ pokemons: pokemonDataArray || [] }));
+    } catch (error) {
+      console.error('포켓몬 데이터 조회에 실패하였습니다', error);
+    }
+  };
+};
+
+export const fetchDetail = (id) => {
+  return async (dispatch) => {
+    try {
+      const res = await getList(id);
+      dispatch(pokemonActions.searchById({ pokemon: res, id }));
     } catch (error) {
       console.error('포켓몬 데이터 조회에 실패하였습니다', error);
     }
