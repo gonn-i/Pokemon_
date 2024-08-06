@@ -43,9 +43,9 @@ instance.interceptors.response.use(
   }
 );
 
-const getList = async (i) => {
+const getList = async (id) => {
   try {
-    const res = await instance.get(`/${i}`);
+    const res = await instance.get(`/${id}`);
     return res;
   } catch (error) {
     throw new Error('포켓몬 데이터 조회에 실패하였습니다');
