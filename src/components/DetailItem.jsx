@@ -2,15 +2,32 @@ import { useSelector } from 'react-redux';
 import { styled } from 'styled-components';
 import { Head } from './atom/HeadInfo';
 import Metrics from '../components/atom/Metrics';
+import StatBox from './atom/Stats';
 
 const DetailItem = () => {
   const detail = useSelector((state) => state.pokemon.detail);
 
+  console.log(detail);
   const isDarkActive = useSelector((state) => state.darkMode.isDarkActive);
-  const { default_name = '', height = '', weight = '', img = {}, types = [], id = '' } = detail;
+  const {
+    default_name = '',
+    height = '',
+    weight = '',
+    img = {},
+    types = [],
+    stats = [],
+    id = '',
+    abilities = [],
+  } = detail;
 
-  console.log(img);
   const maintype = types.length ? types[0].type.name : '';
+  console.log(abilities);
+  let ability = '';
+
+  for (let i = 0; i < abilities.length; i++) {
+    ability += ` ${abilities[i].ability.name} `;
+    if (i == 0) ability += ` / `;
+  }
 
   return (
     <Container>
@@ -25,8 +42,9 @@ const DetailItem = () => {
       <Box isDarkActive={isDarkActive}>
         <Metrics info={weight} label="weight" />
         <Metrics info={height} label="height" />
-        <Metrics info={weight} label="weight" />
+        <Metrics info={ability} label="ability" />
       </Box>
+      <StatBox isDarkActive={isDarkActive} stats={stats} maintype={maintype} />
     </Container>
   );
 };
@@ -58,7 +76,7 @@ const PokemonImg = styled.img`
 
 const Box = styled.div`
 color: ${({ isDarkActive }) => (isDarkActive ? 'var(--text-color-main)' : 'var(--text-color-black)')};
-  width: 70%;
+  width: 76%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
@@ -71,8 +89,8 @@ color: ${({ isDarkActive }) => (isDarkActive ? 'var(--text-color-main)' : 'var(-
   justify-items: center;
 
   @media (max-width: 768px) {
-    width: 50%;
-    font-size: var(--font-size-normal);
+    width: 70%;
+    font-size: var(--font-size-small);
   }
 }
 `;

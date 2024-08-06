@@ -1,14 +1,15 @@
 import { styled } from 'styled-components';
 import Logo from '../assets/pokemon_logo.png';
-import ThemeBtn from './Button';
+import ThemeBtn from './atom/Button';
+import { Link } from 'react-router-dom';
 
 const MainHeader = () => {
   return (
     <Header>
       <Navbar>
-        <div>
+        <Link to="/">
           <LogoImg src={Logo} />
-        </div>
+        </Link>
         <NavBtns>
           <li>
             <ThemeBtn />

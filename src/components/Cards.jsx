@@ -5,18 +5,18 @@ import { useEffect } from 'react';
 import { fetchList } from '../store/pokemon-actions';
 
 const Cards = () => {
-  const pokeDatas = useSelector((state) => state.pokemon.pokemons);
+  const pokeDatas = useSelector((state) => state.pokemon.pokemons) || [];
   const dispatch = useDispatch();
 
+  console.log(pokeDatas);
   useEffect(() => {
     dispatch(fetchList());
-  }, [dispatch]);
+  }, []);
 
-  console.log(pokeDatas);
   return (
     <Container>
       {pokeDatas.map((data) => (
-        <Card key={data.id} num={data.id} img={data.img} name={data.default_name} types={data.types} />
+        <Card id={data.id} img={data.img} name={data.default_name} types={data.types} />
       ))}
     </Container>
   );
@@ -24,7 +24,7 @@ const Cards = () => {
 
 export default Cards;
 
-const Container = styled.section`
+const Container = styled.ul`
   margin: 1%;
   width: 85%;
   display: grid;

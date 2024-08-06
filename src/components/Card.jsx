@@ -1,27 +1,25 @@
 import { styled } from 'styled-components';
 import types from '../styles/type';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import TypesContainer from './atom/Types';
+import { Title, Num } from './atom/HeadInfo';
 
-const Card = ({ num, img, name, types }) => {
+const Card = ({ id, img, name, types }) => {
   const isDarkActive = useSelector((state) => state.darkMode.isDarkActive);
   const maintype = types[0].type.name;
+
   return (
-    <Container maintype={maintype} isDarkActive={isDarkActive}>
-      <div>
-        <Text>No.{num}</Text>
-        <Name>{name[0].name}</Name>
+    <Link to={`/${id}`}>
+      <Container maintype={maintype} isDarkActive={isDarkActive}>
+        <Num id={id} />
+        <Title name={name} />
         <Bottom>
           <PokemonImg src={img.front_default} />
-          <Types>
-            {types.map((each, i) => (
-              <Type key={i} type={each.type.name}>
-                <span>{each.type.name}</span>
-              </Type>
-            ))}
-          </Types>
+          <TypesContainer types={types} />
         </Bottom>
-      </div>
-    </Container>
+      </Container>
+    </Link>
   );
 };
 
@@ -37,17 +35,7 @@ const Container = styled.section`
   text-decoration: none;
   border-radius: 15px;
   padding: 25px;
-  box-shadow: rgba(0, 0, 0, 0.15) 4px 10px 10px 4px;
-`;
-
-const Text = styled.text`
-  color: var(--text-color-grey);
-`;
-
-const Name = styled.h1`
-  margin: 6px 0px 0px 0px;
-  font-size: var(--font-size-large);
-  font-family: 'yg-jalnan';
+  box-shadow: var(--box-shadow-normal);
 `;
 
 const Bottom = styled.div`
@@ -67,20 +55,4 @@ const PokemonImg = styled.img`
   @media (max-width: 768px) {
     min-width: 200px;
   }
-`;
-const Types = styled.div`
-  width: 39%;
-  margin-top: 10px;
-  display: grid;
-  gap: 14%;
-  grid-template-columns: 1fr 1fr;
-`;
-const Type = styled.label`
-  padding: 10%;
-  font-size: var(--font-size-normal);
-  font-weight: var(--font-weight-types)
-  color: var(--text-color-main);
-  text-align: center;
-  background-color: ${({ type }) => types.typeColor[type]};
-  border-radius: 10px;
 `;
