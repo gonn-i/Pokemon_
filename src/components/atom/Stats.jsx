@@ -22,7 +22,7 @@ const StatBox = ({ isDarkActive, stats, maintype }) => {
 export default StatBox;
 
 const Box2 = styled.section`
-  width: 70%;
+  width: 80%;
   color: ${({ isDarkActive }) => (isDarkActive ? 'var(--text-color-main)' : 'var(--text-color-black)')};
   display: flex;
   justify-content: center;

@@ -3,11 +3,10 @@ import { styled } from 'styled-components';
 import { Head } from './atom/HeadInfo';
 import Metrics from '../components/atom/Metrics';
 import StatBox from './atom/Stats';
+import types from '../styles/type';
 
 const DetailItem = () => {
   const detail = useSelector((state) => state.pokemon.detail);
-
-  console.log(detail);
   const isDarkActive = useSelector((state) => state.darkMode.isDarkActive);
   const {
     default_name = '',
@@ -21,7 +20,6 @@ const DetailItem = () => {
   } = detail;
 
   const maintype = types.length ? types[0].type.name : '';
-  console.log(abilities);
   let ability = '';
 
   for (let i = 0; i < abilities.length; i++) {
@@ -44,6 +42,7 @@ const DetailItem = () => {
         <Metrics info={height} label="height" />
         <Metrics info={ability} label="ability" />
       </Box>
+
       <StatBox isDarkActive={isDarkActive} stats={stats} maintype={maintype} />
     </Container>
   );
@@ -56,6 +55,7 @@ const Container = styled.section`
   flex-direction: column;
   width: 68%;
   height: 100vh;
+  margin-bottom: 20px;
   border-radius: 15px;
   color: var(--text-color-main);
   box-shadow: var(--box-shadow-normal);
