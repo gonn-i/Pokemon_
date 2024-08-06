@@ -25,6 +25,7 @@ const pokemonSlice = createSlice({
     searchById(state, action) {
       const pokemon = action.payload.pokemon;
 
+      console.log(pokemon);
       state.detail = {
         id: pokemon.data.id,
         weight: pokemon.data.weight,
@@ -33,6 +34,7 @@ const pokemonSlice = createSlice({
         types: pokemon.data.types,
         stats: pokemon.data.stats,
         img: pokemon.data.sprites,
+        abilities: pokemon.data.abilities,
       };
     },
   },
