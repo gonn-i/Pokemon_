@@ -13,12 +13,16 @@ const pokemonSlice = createSlice({
       const newPokemons = action.payload.pokemons;
 
       newPokemons.forEach((newPokemon) => {
-        state.pokemons.push({
-          id: newPokemon.data.id,
-          default_name: newPokemon.data.forms[0].name,
-          types: newPokemon.data.types,
-          img: newPokemon.data.sprites,
-        });
+        const exists = state.pokemons.some((pokemon) => pokemon.id === newPokemon.data.id);
+
+        if (!exists) {
+          state.pokemons.push({
+            id: newPokemon.data.id,
+            default_name: newPokemon.data.forms[0].name,
+            types: newPokemon.data.types,
+            img: newPokemon.data.sprites,
+          });
+        }
       });
     },
 

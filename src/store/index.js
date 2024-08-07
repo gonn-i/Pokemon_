@@ -10,6 +10,7 @@ import storage from 'redux-persist/lib/storage';
 const persistConfig = {
   key: 'root', // 저장소 키
   storage, // 저장소 위치 (local storage)
+  whitelist: ['pokemon', 'darkMode'], // 저장할 슬라이스를 명시하여 중복을 피함
 };
 
 // 모든 슬라이스 리듀서를 결합
