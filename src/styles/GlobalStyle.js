@@ -22,9 +22,12 @@ ${reset};
   a{
     text-decoration: none; 
     color: inherit; 
-  
   }
 
+  button {
+    border: none;
+    background: none;
+  }
   :root {
     //폰트 크기
     --font-size-extralarge: 45px; 

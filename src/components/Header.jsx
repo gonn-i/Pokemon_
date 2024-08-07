@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 import Logo from '../assets/pokemon_logo.png';
-import ThemeBtn from './atom/Button';
+import ThemeBtn from './atom/ThemeButton';
 import { Link } from 'react-router-dom';
 
 const MainHeader = () => {
