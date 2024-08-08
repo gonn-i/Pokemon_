@@ -3,11 +3,11 @@ import { styled } from 'styled-components';
 import { Head } from './atom/detail/HeadInfo';
 import Metrics from './atom/detail/Metrics';
 import StatBox from './atom/detail/Stats';
-import types from '../styles/type';
 
 const DetailItem = () => {
   const detail = useSelector((state) => state.pokemon.detail);
   const isDarkActive = useSelector((state) => state.darkMode.isDarkActive);
+
   const {
     default_name = '',
     height = '',

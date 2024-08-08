@@ -10,7 +10,7 @@ const Card = ({ id, img, name, types }) => {
   const maintype = types[0].type.name;
 
   return (
-    <Link to={`/${id}`}>
+    <Link to={`/pokemon/${id}`}>
       <Container maintype={maintype} isDarkActive={isDarkActive}>
         <Num id={id} />
         <Title name={name} />

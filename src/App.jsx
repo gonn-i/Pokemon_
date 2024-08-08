@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './pages/Layout';
 import Main from './pages/Main';
 import Detatil from './pages/Detail';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   const router = createBrowserRouter([
@@ -13,8 +14,9 @@ function App() {
           index: true,
           element: <Main />,
         },
-        { path: ':id', element: <Detatil /> },
+        { path: '/pokemon/:id', element: <Detatil /> },
       ],
+      errorElement: <PageNotFound />,
     },
   ]);
   return <RouterProvider router={router}></RouterProvider>;

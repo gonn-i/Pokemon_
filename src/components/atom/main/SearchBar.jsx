@@ -66,7 +66,7 @@ const SearchBar = () => {
         <Results>
           {filteredPokemons.length > 0 ? (
             filteredPokemons.map((pokemon) => (
-              <Link to={`/${pokemon.id}`}>
+              <Link to={`/pokemon/${pokemon.id}`}>
                 <Result key={pokemon.id} isDarkActive={isDarkActive}>
                   <Image src={pokemon.img.front_default} alt={pokemon.default_name} />
                   <Name>{pokemon.default_name}</Name>
