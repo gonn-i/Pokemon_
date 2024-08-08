@@ -1,9 +1,9 @@
-import Card from './atom/Card';
+import Card from './atom/main/Card';
 import { styled } from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchList } from '../store/pokemon-actions';
-import SearchBar from './atom/SearchBar';
+import SearchBar from './atom/main/SearchBar';
 
 const Cards = () => {
   const pokeDatas = useSelector((state) => state.pokemon.pokemons) || [];

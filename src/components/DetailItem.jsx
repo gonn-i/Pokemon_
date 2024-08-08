@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import { styled } from 'styled-components';
-import { Head } from './atom/HeadInfo';
-import Metrics from '../components/atom/Metrics';
-import StatBox from './atom/Stats';
+import { Head } from './atom/detail/HeadInfo';
+import Metrics from './atom/detail/Metrics';
+import StatBox from './atom/detail/Stats';
 import types from '../styles/type';
 
 const DetailItem = () => {
