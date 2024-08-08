@@ -14,9 +14,6 @@ const MainHeader = () => {
           <li>
             <ThemeBtn />
           </li>
-          <li>
-            <Language>🇰🇷 🔄 🇺🇸</Language>
-          </li>
         </NavBtns>
       </Navbar>
     </Header>
