@@ -33,6 +33,7 @@ ${reset};
     --font-size-extralarge: 45px; 
     --font-size-large: 30px; 
     --font-size-stat: 20px; 
+    --font-size-resultName: 25px; 
     --font-size-normal: 13px; 
     --font-size-small: 10px; 
 
@@ -47,6 +48,7 @@ ${reset};
     --text-color-main: #FFFFFF;
     --text-color-grey: #949494;
     --text-color-black: #000000;
+    --text-color-dark-serach: #bbb;
 
     //토큰 버튼 색
     --toggle-background-light:#fcd659;

@@ -43,7 +43,6 @@ const SearchBar = () => {
     }
   }
 
-  // Display results only if searchTerm is not empty
   const showNoResults = searchTerm.length >= 2 && filteredPokemons.length === 0;
 
   return (
@@ -68,7 +67,7 @@ const SearchBar = () => {
           {filteredPokemons.length > 0 ? (
             filteredPokemons.map((pokemon) => (
               <Link to={`/${pokemon.id}`}>
-                <Result key={pokemon.id}>
+                <Result key={pokemon.id} isDarkActive={isDarkActive}>
                   <Image src={pokemon.img.front_default} alt={pokemon.default_name} />
                   <Name>{pokemon.default_name}</Name>
                   <Divider />
@@ -101,6 +100,7 @@ const Input = styled.input`
   padding: 20px 12px;
   font-size: var(--font-size-stat);
   background: ${({ isDarkActive }) => (isDarkActive ? types.typeBgColor['darkMode'] : '')};
+  color: ${({ isDarkActive }) => (isDarkActive ? 'var(--text-color-dark-serach)' : 'var(--text-color-black)')};
 
   @media (max-width: 768px) {
     font-size: var(--font-size-normal);
@@ -130,12 +130,14 @@ const Results = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 `;
 
 const Result = styled.div`
   display: flex;
   align-items: center;
   padding: 10px;
+  color: ${({ isDarkActive }) => (isDarkActive ? 'var(--text-color-dark-serach)' : 'var(--text-color-black)')};
   background: ${({ isDarkActive }) => (isDarkActive ? types.typeBgColor['darkMode'] : ' #f9f9f9')};
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -146,12 +148,11 @@ const Image = styled.img`
   width: 50px;
   object-fit: cover;
   border-radius: 8px;
-  margin-right: 10px;
+  margin-right: 30px;
 `;
 
 const Name = styled.div`
-  font-size: var(--font-size-normal);
-  color: #333;
+  font-size: var(--font-size-resultName);
 `;
 
 const Divider = styled.div`
