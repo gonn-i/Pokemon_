@@ -63,4 +63,7 @@ const Gauge = styled.div`
     left: 0;
     animation: ${({ base }) => fillAnimation(base)} 2s ease-out;
   }
+  @media (max-width: 768px) {
+    height: 10px;
+  }
 `;

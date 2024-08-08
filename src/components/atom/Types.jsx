@@ -39,5 +39,6 @@ const Type = styled.label`
 
   @media (max-width: 768px) {
     padding: ${({ page }) => page == 'detail' && '6%'};
+    font-size: var(--font-size-small);
   }
 `;

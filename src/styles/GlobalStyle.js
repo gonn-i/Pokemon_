@@ -20,12 +20,18 @@ ${reset};
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
-
+    top: 0;
+    right: 0;
+    left: 0;
   }
 
   a{
     text-decoration: none; 
     color: inherit; 
+  }
+
+  p{
+    font-family: 'Pretendard-Regular';
   }
 
   button {
@@ -34,6 +40,7 @@ ${reset};
   }
   :root {
     overflow-x: hidden;
+    margin:0;
 
     //폰트 크기
     --font-size-extralarge: 45px; 

@@ -108,6 +108,7 @@ const Input = styled.input`
 `;
 
 const BtnBox = styled.span`
+  color: var(--text-color-black);
   position: absolute;
   width: 20px;
   top: 19px;
@@ -117,9 +118,9 @@ const BtnBox = styled.span`
   gap: 40px;
 
   @media (max-width: 768px) {
-    right: 52px;
+    right: 58px;
     top: 18px;
-    gap: 10px;
+    gap: 5px;
   }
 `;
 
