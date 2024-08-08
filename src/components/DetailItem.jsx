@@ -72,19 +72,19 @@ const PokemonImg = styled.img`
 
   @media (max-width: 768px) {
     max-width: 130px;
-    top: 25%;
+    top: 30%;
     right: 20%;
   }
 `;
 
 const Box = styled.div`
-color: ${({ isDarkActive }) => (isDarkActive ? 'var(--text-color-main)' : 'var(--text-color-black)')};
+  color: ${({ isDarkActive }) => (isDarkActive ? 'var(--text-color-main)' : 'var(--text-color-black)')};
   width: 76%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
   margin: 50px auto ;
-  box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 10px 10px;
+  box-shadow: ${({ isDarkActive }) => (isDarkActive ? '#e0e0e012 7px 6px 25px 25px' : 'rgba(0, 0, 0, 0.15) 10px 10px 10px 10px')};
   border-radius: 10px;
   padding: 22px 40px;
 

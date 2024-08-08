@@ -33,6 +33,8 @@ ${reset};
     background: none;
   }
   :root {
+    overflow-x: hidden;
+
     //폰트 크기
     --font-size-extralarge: 45px; 
     --font-size-large: 30px; 
@@ -78,4 +80,11 @@ ${reset};
     font-weight: normal;
     font-style: normal;
 }
+
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
 `;

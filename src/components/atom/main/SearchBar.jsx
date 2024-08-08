@@ -117,7 +117,7 @@ const BtnBox = styled.span`
   gap: 40px;
 
   @media (max-width: 768px) {
-    right: 35px;
+    right: 52px;
     top: 18px;
     gap: 10px;
   }

@@ -21,6 +21,7 @@ const Types = styled.div`
   display: grid;
   gap: ${({ page }) => (page == 'detail' ? '5%' : '14%')};
   grid-template-columns: 1fr 1fr;
+  font-family: 'Pretendard-Regular';
 
   @media (max-width: 768px) {
     grid-template-columns: ${({ page }) => (page == 'detail' ? '1fr' : '1fr 1fr')};
@@ -30,7 +31,7 @@ const Types = styled.div`
 const Type = styled.label`
   padding: 10%;
   font-size: var(--font-size-normal);
-  font-weight: var(--font-weight-types)
+  font-weight: var(--font-weight-types);
   color: var(--text-color-main);
   text-align: center;
   background-color: ${({ type }) => types.typeColor[type]};
