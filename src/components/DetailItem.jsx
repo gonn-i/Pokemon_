@@ -58,7 +58,7 @@ const Container = styled.section`
   flex-direction: column;
   width: 68%;
   height: 100vh;
-  margin-bottom: 20px;
+  margin: 25px 0;
   border-radius: 15px;
   color: var(--text-color-main);
   box-shadow: var(--box-shadow-normal);
@@ -83,17 +83,19 @@ color: ${({ isDarkActive }) => (isDarkActive ? 'var(--text-color-main)' : 'var(-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
-  margin: 50px auto auto;
+  margin: 50px auto ;
   box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 10px 10px;
   border-radius: 10px;
-  padding: 35px;
+  padding: 22px 40px;
 
   font-family: 'yg-jalnan';
   justify-items: center;
 
   @media (max-width: 768px) {
-    width: 70%;
+    width: 50%;
     font-size: var(--font-size-small);
+    gap:10px;
+    margin: 50px auto 40px;
   }
 }
 `;

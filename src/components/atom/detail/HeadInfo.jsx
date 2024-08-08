@@ -37,6 +37,10 @@ const Name = styled.h1`
   margin: 6px 0px 0px 0px;
   font-size: ${({ label }) => (label == 'detail' ? 'var(--font-size-extralarge)' : 'var(--font-size-large)')};
   font-family: 'yg-jalnan';
+
+  @media (max-width: 768px) {
+    font-size: ${({ label }) => (label == 'detail' ? 'var(--font-size-large)' : '')};
+  }
 `;
 
 const Back = styled.div`

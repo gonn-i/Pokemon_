@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 
 const StatBox = ({ isDarkActive, stats, maintype }) => {
   return (
-    <Box2 isDarkActive={isDarkActive}>
+    <Box isDarkActive={isDarkActive}>
       <ul>
         {stats.map((stat, i) => (
           <StatBar
@@ -15,20 +15,24 @@ const StatBox = ({ isDarkActive, stats, maintype }) => {
           />
         ))}
       </ul>
-    </Box2>
+    </Box>
   );
 };
 
 export default StatBox;
 
-const Box2 = styled.section`
+const Box = styled.section`
   width: 80%;
   color: ${({ isDarkActive }) => (isDarkActive ? 'var(--text-color-main)' : 'var(--text-color-black)')};
   display: flex;
   justify-content: center;
 
-  margin: 0px auto auto;
+  margin: 0px auto 30px;
   font-family: 'DungGeunMo';
   font-size: var(--font-size-stat);
-  font-weight: 900;
+
+  @media (max-width: 768px) {
+    width: 70%;
+    font-size: var(--font-size-normal);
+  }
 `;

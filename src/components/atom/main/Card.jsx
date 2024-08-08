@@ -54,5 +54,7 @@ const PokemonImg = styled.img`
 
   @media (max-width: 768px) {
     min-width: 200px;
+    bottom: -34px;
+    right: -45px;
   }
 `;

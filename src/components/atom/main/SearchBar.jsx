@@ -89,7 +89,7 @@ const Search = styled.div`
   box-shadow: var(--box-shadow-normal);
   margin: 10px;
   position: relative;
-  width: 70%;
+  width: 90%;
   margin: 40px;
 `;
 
@@ -113,12 +113,13 @@ const BtnBox = styled.span`
   top: 19px;
   right: 75px;
   margin: 0;
-
   display: flex;
   gap: 40px;
 
   @media (max-width: 768px) {
-    right: 65px;
+    right: 35px;
+    top: 18px;
+    gap: 10px;
   }
 `;
 
