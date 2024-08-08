@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
-import back from '../../assets/background.png';
-import TypesContainer from './Types';
-import types from '../../styles/type';
+import back from '../../../assets/background.png';
+import TypesContainer from '../Types';
+import types from '../../../styles/type';
 
 const Title = ({ name, label }) => {
   return (

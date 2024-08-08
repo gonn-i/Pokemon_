@@ -1,9 +1,9 @@
 import { styled } from 'styled-components';
-import types from '../../styles/type';
+import types from '../../../styles/type';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import TypesContainer from './Types';
-import { Title, Num } from './HeadInfo';
+import TypesContainer from '../Types';
+import { Title, Num } from '../detail/HeadInfo';
 
 const Card = ({ id, img, name, types }) => {
   const isDarkActive = useSelector((state) => state.darkMode.isDarkActive);

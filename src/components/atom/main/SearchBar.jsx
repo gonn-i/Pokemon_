@@ -1,7 +1,7 @@
 import { FaSearch } from 'react-icons/fa';
 import { styled } from 'styled-components';
 import { useSelector } from 'react-redux';
-import types from '../../styles/type';
+import types from '../../../styles/type';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 

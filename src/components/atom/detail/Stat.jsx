@@ -1,4 +1,4 @@
-import types from '../../styles/type';
+import types from '../../../styles/type';
 import { styled, keyframes } from 'styled-components';
 
 const StatBar = ({ stat, base, maintype, isDarkActive }) => {
