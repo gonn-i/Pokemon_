@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialPokemonData = {
   pokemons: [],
   detail: [],
+  isLoading: false,
 };
 
 const pokemonSlice = createSlice({
@@ -29,7 +30,6 @@ const pokemonSlice = createSlice({
     searchById(state, action) {
       const pokemon = action.payload.pokemon;
 
-      console.log(pokemon);
       state.detail = {
         id: pokemon.data.id,
         weight: pokemon.data.weight,
@@ -40,6 +40,9 @@ const pokemonSlice = createSlice({
         img: pokemon.data.sprites,
         abilities: pokemon.data.abilities,
       };
+    },
+    setLoading(state, action) {
+      state.isLoading = action.payload;
     },
   },
 });

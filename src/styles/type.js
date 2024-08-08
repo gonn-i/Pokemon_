@@ -37,7 +37,7 @@ const typeBgColor = {
   ghost: '#A284A2',
   dragon: '#8D98EC',
   dark: '#998B8C',
-  steel: '#98C2D1A',
+  steel: '#98C2D1',
   fairy: '#F5A2F5',
 };
 

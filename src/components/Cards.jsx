@@ -4,22 +4,28 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchList } from '../store/pokemon-actions';
 import SearchBar from './atom/main/SearchBar';
+import LoadingModal from './atom/Modal';
 
 const Cards = () => {
   const pokeDatas = useSelector((state) => state.pokemon.pokemons) || [];
+  const isLoading = useSelector((state) => state.pokemon.isLoading);
   const dispatch = useDispatch();
 
-  console.log(pokeDatas);
   useEffect(() => {
-    dispatch(fetchList());
-  }, []);
+    const fetchData = () => {
+      dispatch(fetchList());
+    };
+
+    fetchData();
+  }, [dispatch]);
 
   return (
     <Container>
+      {isLoading && <LoadingModal />}
       <SearchBar />
       <CardBox>
         {pokeDatas.map((data) => (
-          <Card id={data.id} img={data.img} name={data.default_name} types={data.types} />
+          <Card key={data.id} id={data.id} img={data.img} name={data.default_name} types={data.types} />
         ))}
       </CardBox>
     </Container>

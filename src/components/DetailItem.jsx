@@ -3,10 +3,12 @@ import { styled } from 'styled-components';
 import { Head } from './atom/detail/HeadInfo';
 import Metrics from './atom/detail/Metrics';
 import StatBox from './atom/detail/Stats';
+import LoadingModal from './atom/Modal';
 
 const DetailItem = () => {
   const detail = useSelector((state) => state.pokemon.detail);
   const isDarkActive = useSelector((state) => state.darkMode.isDarkActive);
+  const isLoading = useSelector((state) => state.pokemon.isLoading);
 
   const {
     default_name = '',
@@ -29,6 +31,7 @@ const DetailItem = () => {
 
   return (
     <Container>
+      {isLoading && <LoadingModal />}
       <Head isDarkActive={isDarkActive} name={default_name} maintype={maintype} types={types} id={id} />
       {img.front_default && (
         <PokemonImg
