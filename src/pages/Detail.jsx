@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { fetchDetail } from '../store/pokemon-actions';
 import { useEffect } from 'react';
 
-const Detatil = () => {
+const Detail = () => {
   const id = useParams().id;
   const dispatch = useDispatch();
 
@@ -19,4 +19,4 @@ const Detatil = () => {
   );
 };
 
-export default Detatil;
+export default Detail;
