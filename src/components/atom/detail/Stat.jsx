@@ -19,7 +19,6 @@ const Stat = styled.li`
   display: grid;
   grid-template-columns: 1fr 1fr 3fr;
   justify-items: start;
-  gap: 10px;
   margin-bottom: 20px;
   align-items: center;
   margin-left: 10%;

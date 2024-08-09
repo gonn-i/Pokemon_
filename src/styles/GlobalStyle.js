@@ -45,7 +45,7 @@ ${reset};
     //폰트 크기
     --font-size-extralarge: 45px; 
     --font-size-large: 30px; 
-    --font-size-stat: 20px; 
+    --font-size-stat: 15px; 
     --font-size-resultName: 25px; 
     --font-size-normal: 13px; 
     --font-size-small: 10px; 
@@ -77,7 +77,7 @@ ${reset};
     @font-face {
       font-family: 'yg-jalnan';
       src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
-      font-size: x-large;
+      font-size: small;
       font-style: normal;
   }
 
@@ -94,4 +94,6 @@ ${reset};
     font-weight: 400;
     font-style: normal;
   }
+
+
 `;

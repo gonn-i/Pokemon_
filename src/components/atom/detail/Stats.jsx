@@ -27,8 +27,8 @@ const Box = styled.section`
   display: flex;
   justify-content: center;
 
-  margin: 0px auto 30px;
-  font-family: 'DungGeunMo';
+  margin: 10px auto 30px;
+  font-family: 'yg-jalnan';
   font-size: var(--font-size-stat);
 
   @media (max-width: 768px) {
