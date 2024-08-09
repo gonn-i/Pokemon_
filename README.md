@@ -7,6 +7,8 @@
 
 ![pokemon_logo](https://github.com/user-attachments/assets/1a644316-ab20-49c9-937a-0b7ebab2cfcb)
 
+[배포링크🔗](https://gonspokedex.netlify.app/)
+
 <div align="center">
   <h1> 사용한 기술 스택 ⚒️</h1>
 </div>
@@ -14,7 +16,7 @@
 ---
 
 <div align="center">
-  <img alt='react' src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
+  <img alt='react' src="https://img.shields.io/badge/react-61DAFB.svg?&style=flat-square&logo=react&logoColor=white"> 
   <img alt="redux" src ="https://img.shields.io/badge/redux-764ABC.svg?&style=flat-square&logo=redux&logoColor=white"/>
   <img alt="axios" src ="https://img.shields.io/badge/axios-5A29E4.svg?&style=flat-square&logo=axios&logoColor=white"/>
   <img alt="styled-components" src ="https://img.shields.io/badge/styled-components-DB7093.svg?&style=flat-square&logo=styled-components&logoColor=white"/>
@@ -48,7 +50,7 @@
 ### 로딩 & 404 에러 핸들링
 | 로딩 모달 | 404 페이지 |
 | --- | --- |
-| ![image](https://github.com/user-attachments/assets/cf908152-3276-4ae5-867a-3bb15f5af313) | ![image](https://github.com/user-attachments/assets/0c1e2f44-ffbd-49d7-b556-78ea577264af) |
+| https://github.com/user-attachments/assets/cf908152-3276-4ae5-867a-3bb15f5af313 | https://github.com/user-attachments/assets/0c1e2f44-ffbd-49d7-b556-78ea577264af |
 | 포켓몬볼 애니메이션 ☄️ | random 포켓몬 gif 👾 |
 
 ### 반응형
