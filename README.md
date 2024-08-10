@@ -50,7 +50,7 @@
 ### 로딩 & 404 에러 핸들링
 | 로딩 모달 | 404 페이지 |
 | --- | --- |
-| https://github.com/user-attachments/assets/cf908152-3276-4ae5-867a-3bb15f5af313 | https://github.com/user-attachments/assets/0c1e2f44-ffbd-49d7-b556-78ea577264af |
+|![loading](https://velog.velcdn.com/images/gonn-i/post/f070b564-86cb-4422-9b6d-04940e4d0b12/image.gif)|![error](https://velog.velcdn.com/images/gonn-i/post/f479e42e-c0e2-41d2-9ec2-b66ebe0920b1/image.gif)|
 | 포켓몬볼 애니메이션 ☄️ | random 포켓몬 gif 👾 |
 
 ### 반응형
