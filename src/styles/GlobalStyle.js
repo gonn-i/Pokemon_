@@ -5,14 +5,14 @@ import './type';
 export const GlobalStyles = createGlobalStyle`
 ${reset};
 
-  // * {
-  //   // 드래그 하지 못하게
-  //   user-select: none; 
-  //   -webkit-user-drag: none;
-  //   -moz-user-drag: none;
-  //   -o-user-drag: none;
-  //   user-drag: none;
-  // }
+  * {
+    // 드래그 하지 못하게
+    user-select: none; 
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
 
 
   body {

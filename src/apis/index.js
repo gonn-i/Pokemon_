@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const instance = axios.create({
   baseURL: 'https://pokeapi.co/api/v2/pokemon',
-  timeout: 4000,
+  timeout: 8000,
 });
 
 // 요청에 대한 인터셉터 (에러 핸들링)
