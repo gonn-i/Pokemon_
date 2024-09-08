@@ -6,7 +6,7 @@ export const fetchList = () => {
     await dispatch(pokemonActions.setLoading(true));
     try {
       const requests = [];
-      for (let i = 1; i <= 201; i++) {
+      for (let i = 1; i <= 50; i++) {
         requests.push(getList(i));
       }
 

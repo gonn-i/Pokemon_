@@ -1,9 +1,7 @@
 <div align="center">
   <h2> PokeDex 🎮 </h2>
-  201 종의 포켓몬의 도감을 만나볼 수 있는 웹사이트입니다 🃏👀 
+  포켓몬 도감을 만나볼 수 있는 웹사이트입니다 🃏👀 
 </div>
-
----
 
 ![pokemon_logo](https://github.com/user-attachments/assets/1a644316-ab20-49c9-937a-0b7ebab2cfcb)
 
@@ -19,7 +17,7 @@
   <img alt='react' src="https://img.shields.io/badge/react-61DAFB.svg?&style=flat-square&logo=react&logoColor=white"> 
   <img alt="redux" src ="https://img.shields.io/badge/redux-764ABC.svg?&style=flat-square&logo=redux&logoColor=white"/>
   <img alt="axios" src ="https://img.shields.io/badge/axios-5A29E4.svg?&style=flat-square&logo=axios&logoColor=white"/>
-  <img alt="styled-components" src ="https://img.shields.io/badge/styled-components-DB7093.svg?&style=flat-square&logo=styled-components&logoColor=white"/>
+  <img src="https://img.shields.io/badge/styled components-DB7093?style=flat-square&logo=styled-components&logoColor=white"/>
   <img alt="vite" src ="https://img.shields.io/badge/vite-646CFF.svg?&style=flat-square&logo=vite&logoColor=white"/>
 </div>
 
@@ -69,6 +67,7 @@
 
 ---
 
+<p style="color:grey"> 🔜 무한스크롤 (react query) 로 구현할 예정 ⚒️ </p>
 - `redux Toolkit`을 통한 전역관리, `redux-persist`로 local storage에 저장 ⚔️
   - 다크모드/ 라이트모드 구현 및 list data 임시저장
   - 새로고침에도 데이터 손실을 방지
