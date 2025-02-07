@@ -68,6 +68,7 @@
 ---
 
 <p style="color:grey"> 🔜 무한스크롤 (react query) 로 구현할 예정 ⚒️ </p>
+
 - `redux Toolkit`을 통한 전역관리, `redux-persist`로 local storage에 저장 ⚔️
   - 다크모드/ 라이트모드 구현 및 list data 임시저장
   - 새로고침에도 데이터 손실을 방지
